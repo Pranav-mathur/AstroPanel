@@ -140,13 +140,8 @@ class _BankDetailsScreenState extends State<BankDetailsScreen> {
       );
 
       // If successful, show success dialog and navigate to home
-      if (response['message'] == 'Profile updated') {
-        // Show success dialog
-        if (mounted) {
-          _showSuccessDialog();
-        }
-      } else {
-        throw Exception(response['message'] ?? 'Failed to update bank details');
+      if (mounted) {
+        _showSuccessDialog();
       }
     } catch (e) {
       // Show error message
